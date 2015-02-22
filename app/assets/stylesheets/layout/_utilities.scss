@@ -1,11 +1,9 @@
 /* -------------------------------------
  * Utilities classes
- * These are examples of utilities classes
- * Feel free to change them and create your own
  * ------------------------------------- */
 .padded {
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 .bg-red {
   background: $red;
@@ -20,7 +18,7 @@
   color: white;
 }
 .bg-orange {
-  background: $orange;
+  background: $orange-dark;
   color: white;
 }
 .bg-green {
@@ -30,4 +28,11 @@
 .bg-purple {
   background: $purple;
   color: white;
+}
+.bg-pink {
+  background: $pink-light;
+  color: white;
+}
+.text-warning {
+  color: $orange-dark;
 }
