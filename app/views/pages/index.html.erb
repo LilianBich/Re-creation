@@ -1,20 +1,54 @@
----
-title: Re.creation
----
-
- <!-- Banner -->
-  <div class='banner'>
+<div class="section banner window-height below-navbar text-center">
+  <div id="banner_title" class="padded">
     <%= image_tag "logo.png" %>
-    <br>
-    <p>
-      Découvrez
-      des objets à offrir, à personnaliser,
-      à confectionner soi-même, <br>
-      des ateliers créatifs pour enfants et plus grands,
-      dans un lieu convivial.
-    </p>
-    <!-- <button data-toggle="modal" data-target="#sign-up" class="btn btn-primary">Join</button> -->
+    <ul class="list-inline">
+      <li><a href="#section2">Ateliers</a></li>
+      <li><i class="fa fa-circle"></i></li>
+      <li><a href="#section3">Boutique</a></li>
+      <li><i class="fa fa-circle"></i></li>
+      <li><a href="#section4">Création</a></li>
+    </ul>
   </div>
+  <a href="#section2"><i class="fa fa-angle-down floating"></i></a>
+</div>
+<div class="section window-height text-center padded" id="section2">
+  <div data-sr="enter left please, and hustle 20px"> Foo </div>
+  <div data-sr="wait 2.5s and then ease-in-out 100px"> Bar </div>
+  <div data-sr="enter bottom and scale up 20% over 2s"> Baz </div>
+  <a href="#section3"><i class="fa fa-angle-down floating"></i></a>
+</div>
+<div class="section bg-blue window-height text-center" id="section3">
+  <div data-sr='enter left'> Bar </div>
+  <div data-sr="wait 2.5s and then ease-in-out 100px"> Babababa </div>
+  <a href="#section4"><i class="fa fa-angle-down floating"></i></a>
+</div>
+<div class="section window-height" id="section4"></div>
+<!-- Adding jquery and relative bootstrap librairy -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- Script to get the section with class .window height the same size as the window -->
+<script>
+  $(document).ready(function() {
+    $(".window-height").css("height", $(window).height());
+  });
+</script>
+<!-- script to have a nive smoothscroll -->
+<script>
+  $(document).ready(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>
 
   <div class="bg-pink">
     <div class="container">

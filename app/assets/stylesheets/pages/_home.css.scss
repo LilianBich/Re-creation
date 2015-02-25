@@ -1,10 +1,30 @@
+.section {
+  position: relative;
+  a {
+    .fa-angle-down {
+      position: absolute;
+      font-size: 50px;
+      width: 100px;
+      text-align: center;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -50px;
+      color: $pink
+    }
+    &:hover .fa-angle-down{
+      color: $red;
+    }
+  }
+  div {
+    font-size: 50px;
+  }
+}
+
 .banner {
   color: white;
-  padding: 150px 8%;
   background-size: cover;
-  height: 650px;
   background-image: image-url('background.png');
-  margin: 0;
+  margin: 0px;
   h1 {
     font-size: 50px;
     color: white;
@@ -15,6 +35,25 @@
     font-weight: 100;
   }
   img {
-    height: 100px;
+    height: 200px;
   }
 }
+
+#banner_title {
+  color: $pink;
+  i {
+    vertical-align: middle;
+    font-size: 20px;
+  }
+  a {
+    color: $pink;
+    &:hover {
+      color: $red;
+    }
+  }
+
+}
+
+
+
+
