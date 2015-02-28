@@ -11,44 +11,59 @@
   </div>
   <a href="#section2"><i class="fa fa-angle-down floating"></i></a>
 </div>
-<div class="section window-height text-center padded" id="section2">
-  <div data-sr="enter left please, and hustle 20px"> Foo </div>
-  <div data-sr="wait 2.5s and then ease-in-out 100px"> Bar </div>
-  <div data-sr="enter bottom and scale up 20% over 2s"> Baz </div>
+<div class="section bg-orange window-height text-center below-navbar" id="section2">
+  <h2>Coté Ateliers</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-5 col-sm-offset-1">
+        <%= image_tag "ateliers.png", class: "img-responsive" %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <div class= "text-home">Un nouveau thème de loisirs créatifs est proposé chaque semaine, aux enfants à partir de 8 ans.</div>
+          <ul>
+            <li>Peinture sur textile : décors de trousses, de sacs de goûter et de gym, de tapis de souris...
+            </li>
+            <li>Peinture sur bois : cadres photo, boites à trésors...</li>
+            <li> Peinture sur porcelaine : bols, mugs...</li>
+            <li>Confection de bracelets : perles, brésiliens, sham- ballas..</li>
+            <li>Décorations et cadeaux de Noël...</li>
+          </ul>
+      </div>
+    </div>
+  </div>
   <a href="#section3"><i class="fa fa-angle-down floating"></i></a>
 </div>
-<div class="section bg-blue window-height text-center" id="section3">
-  <div data-sr='enter left'> Bar </div>
-  <div data-sr="wait 2.5s and then ease-in-out 100px"> Babababa </div>
+
+<div class="section bg-blue window-height text-center below-navbar" id="section3">
+  <h2>Coté Boutique</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-5 col-sm-offset-1">
+        <%= image_tag "boutique.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <div class= "text-home">La boutique vous acceuille dans un cadre chaleureux, vous y retrouvez des idées de créations et de cadeaux</div>
+      </div>
+    </div>
+  </div>
+  <!-- <div data-sr='enter left'> Bar </div>
+  <div data-sr="wait 2.5s and then ease-in-out 100px"> Babababa </div> -->
   <a href="#section4"><i class="fa fa-angle-down floating"></i></a>
 </div>
-<div class="section window-height" id="section4"></div>
-<!-- Adding jquery and relative bootstrap librairy -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- Script to get the section with class .window height the same size as the window -->
-<script>
-  $(document).ready(function() {
-    $(".window-height").css("height", $(window).height());
-  });
-</script>
-<!-- script to have a nive smoothscroll -->
-<script>
-  $(document).ready(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-</script>
+<div class="section window-height text-center below-navbar" id="section4">
+  <h2>Coté Création</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-5 col-sm-offset-1">
+        <%= image_tag "creation.png", class: "img-responsive" %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <div class= "text-home">Un nouveau thème de loisirs créatifs est proposé chaque semaine, aux enfants à partir de 8 ans.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="bg-pink">
     <div class="container">

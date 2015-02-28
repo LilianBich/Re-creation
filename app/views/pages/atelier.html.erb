@@ -1,40 +1,55 @@
-<div class="bg-pink padded">
-  <h2 class="text-center">Cote <span class="text-warning">Atelier</span></h2>
-  <p>Un nouveau thème de loisirs créatifs est proposé chaque semaine, aux enfants à partir de 8 ans.</p>
-  <ul>
-    <li>Peinture sur textile : décors de trousses, de sacs de goûter et de gym, de tapis de souris...
-</li>
-    <li>Peinture sur bois : cadres photo, boites à trésors...</li>
-    <li> Peinture sur porcelaine : bols, mugs...</li>
-    <li>Confection de bracelets : perles, brésiliens, sham- ballas..</li>
-    <li>Décorations et cadeaux de Noël...</li>
-  </ul>
-</div>
-<div>
-  <h3 class = "text-center">Le programme du mois de Mars</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis explicabo, dicta dolor magni illo assumenda accusantium impedit distinctio quia similique voluptates magnam, sed ex minus vero quibusdam quae. Cupiditate.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis explicabo, dicta dolor magni illo assumenda accusantium impedit distinctio quia similique voluptates magnam, sed ex minus vero quibusdam quae. Cupiditate.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis explicabo, dicta dolor magni illo assumenda accusantium impedit distinctio quia similique voluptates magnam, sed ex minus vero quibusdam quae. Cupiditate.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis explicabo, dicta dolor magni illo assumenda accusantium impedit distinctio quia similique voluptates magnam, sed ex minus vero quibusdam quae. Cupiditate.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis explicabo, dicta dolor magni illo assumenda accusantium impedit distinctio quia similique voluptates magnam, sed ex minus vero quibusdam quae. Cupiditate.
-  </p>
+<div class="below-navbar">
+  <div class="bg-pink padded">
+    <h2 class="text-center">Cote <span class="text-warning">Atelier</span></h2>
+  </div>
+  <div id="program_du_mois">
+    <h3 class = "text-center">Le programme du mois de Mars</h3>
+    <div class="prog-sem">
+      <% if @program.sem1? %>
+        <%= @program.jour_date_sem1 %>
+        <%= @program.ateliers_sem1 %>
+      <% end %>
+    </div>
+    <div class="prog-sem">
+      <% if @program.sem2? %>
+        <%= @program.jour_date_sem2 %>
+        <%= @program.ateliers_sem2 %>
+      <% end %>
+    </div>
+    <div class="prog-sem">
+      <% if @program.sem3? %>
+        <%= @program.jour_date_sem3 %>
+        <%= @program.ateliers_sem3 %>
+      <% end %>
+    </div>
+    <div class="prog-sem">
+      <% if @program.sem4? %>
+        <%= @program.jour_date_sem4 %>
+        <%= @program.ateliers_sem4 %>
+      <% end %>
+    </div>
+    <div class="prog-sem">
+      <% if @program.sem5? %>
+        <%= @program.jour_date_sem5 %>
+        <%= @program.ateliers_sem5 %>
+      <% end %>
+    </div>
+    <div class="prog-sem">
+      <% if @program.vacances? %>
+        Pendant les vacances
+        <%= @program.ateliers_vacances %>
+      <% end %>
+    </div>
 
-</div>
-<div class="bg-pink text-center">
-  <h3>Une selection des plus belles creation du mois dernier</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 padded"><%= image_tag "http://placehold.it/300x300" %></div>
-      <div class="col-xs-12 col-md-6 padded"><%= image_tag "http://placehold.it/300x300" %></div>
+
+  </div>
+  <div class="bg-pink text-center">
+    <h3>Une selection des plus belles creation du mois dernier</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 padded"><%= image_tag "http://placehold.it/300x300" %></div>
+        <div class="col-xs-12 col-md-6 padded"><%= image_tag "http://placehold.it/300x300" %></div>
+      </div>
     </div>
   </div>
 </div>

@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def atelier
+    @program = ProgrammeDuMois.last
   end
 
   def boutique

@@ -1,5 +1,6 @@
 .section {
   position: relative;
+  display: block;
   a {
     .fa-angle-down {
       position: absolute;
@@ -15,15 +16,12 @@
       color: $red;
     }
   }
-  div {
-    font-size: 50px;
-  }
 }
 
 .banner {
   color: white;
   background-size: cover;
-  background-image: image-url('background.png');
+  background-image: image-url('background2.jpg');
   margin: 0px;
   h1 {
     font-size: 50px;
@@ -35,12 +33,15 @@
     font-weight: 100;
   }
   img {
+
     height: 200px;
   }
 }
 
 #banner_title {
+  font-size: 50px;
   color: $pink;
+  text-shadow: 1px 1px 2px black;
   i {
     vertical-align: middle;
     font-size: 20px;
@@ -48,11 +49,18 @@
   a {
     color: $pink;
     &:hover {
-      color: $red;
+      color: $yellow;
     }
   }
 
 }
+
+.to_solve_container_issue {
+  position: static;
+  height: 100%;
+}
+
+
 
 
 

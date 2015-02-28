@@ -64,3 +64,5 @@ gem 'puma',           group: :production
 gem 'devise'
 gem 'omniauth-facebook'
 
+gem 'activeadmin', github: 'activeadmin'
+
