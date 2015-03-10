@@ -20,18 +20,10 @@
   </div>
 </div>
 
-<div class="padded">
-  <div class="container">
-      <div class="row">
-        <% data.boutique.each do |product| %>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card">
-              <p><%=product.price%></p>
-              <%= image_tag product.picture%>
-              <p><%=product.price%></p>
-            </div>
-          </div>
-        <%end%>
-      </div>
-  </div>
+<div class="test-aws below-navbar">
+  <% if !@creations.empty? %>
+    <%= image_tag @creations[0].picture.url(:medium) %>
+  <% else %>
+    <p>Le site est en cours de renovation. Contactez Lilian au plus vite</p>
+  <% end %>
 </div>

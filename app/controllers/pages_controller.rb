@@ -7,10 +7,11 @@ class PagesController < ApplicationController
   end
 
   def boutique
+    @creations = Produit.where(creation: false)
   end
 
   def creations
-    @creation = Produit.last
+    @creations = Produit.where(creation: true)
   end
 
   def contact

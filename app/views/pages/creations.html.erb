@@ -3,11 +3,11 @@
 
 
 <div class="test-aws below-navbar">
-  <% if @creation %>
-    <%= image_tag @creation.picture.url(:medium) %>
+  <% if !@creations.empty? %>
+    <%= image_tag @creations[0].picture.url(:medium) %>
   <% else %>
     <p>Le site est en cours de renovation. Contactez Lilian au plus vite</p>
   <% end %>
 </div>
-</div>
+
 
