@@ -1,54 +1,13 @@
 
 <!-- REfaire une boucle ici, postionnment un peu tricky -->
-<div class="bg-pink text-center">
-  <h2>Découvrez nos créations</h2>
-  <div id="all_creations">
-    <% data.creation.each do |creation| %>
-      <div class="creation-card">
-        <h3><%=creation.titre%></h3>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <%= image_tag creation.picture, class: "text-center" %>
-            </div>
-            <div class="col-xs-12 col-md-6">
-              <div class="creation_description">
-                <p>
-                  <%=creation.para1%>
-                </p>
-                <p>
-                  <%=creation.para2%>
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    <%end%>
-  </div>
 
 
-  <!-- <div class="creation-card">
-    <h3>Titre</h3>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          IMG
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div class="creation_description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt veniam eum animi consectetur, cupiditate. Voluptate dolorem dolores debitis, tenetur eveniet impedit, ducimus iste suscipit harum corporis, temporibus culpa architecto voluptas.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt veniam eum animi consectetur, cupiditate. Voluptate dolorem dolores debitis, tenetur eveniet impedit, ducimus iste suscipit harum corporis, temporibus culpa architecto voluptas.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div> -->
+<div class="test-aws below-navbar">
+  <% if @creation %>
+    <%= image_tag @creation.picture.url(:medium) %>
+  <% else %>
+    <p>Le site est en cours de renovation. Contactez Lilian au plus vite</p>
+  <% end %>
+</div>
 </div>
 

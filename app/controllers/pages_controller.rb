@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def creations
+    @creation = Produit.last
   end
 
   def contact
