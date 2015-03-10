@@ -66,3 +66,6 @@ gem 'omniauth-facebook'
 
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'aws-sdk', '< 2.0'
+gem "paperclip"
+

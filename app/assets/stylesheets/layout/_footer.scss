@@ -1,1 +1,10 @@
 // Your footer style
+#footer {
+  background-color: black;
+  a {
+    color: white;
+    &:hover{
+      color: red;
+    }
+  }
+}

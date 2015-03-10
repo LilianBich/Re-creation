@@ -1,4 +1,9 @@
-.atelier {
-  margin-top: $navbar-height + 2 * $navbar-vertical-padding;
-}
+#program_du_mois {
+  h3{
+    color: $pink;
+  }
 
+  .jour_date {
+    color: $pink;
+  }
+}
