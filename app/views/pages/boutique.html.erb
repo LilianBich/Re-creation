@@ -1,29 +1,34 @@
-<div class="bg-pink text-center padded">
-  <h2>Les nouveautés</h2>
-  <div class="cotainer">
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="card">
-          <h4>Titre</h4>
-          <%= image_tag "http://placehold.it/300x300" %>
-          <p></p>
+<div class="below-navbar">
+  <div class="bg-pink text-center" id="new_boutique">
+    <h2>Les nouveautés</h2>
+    <div class="cotainer">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="card_product">
+            <h4>Titre</h4>
+            <%= image_tag "http://placehold.it/300x300" %>
+            <p></p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="card">
-          <h4>Titre</h4>
-          <%= image_tag "http://placehold.it/300x300" %>
-          <p></p>
+        <div class="col-xs-12 col-md-6">
+          <div class="card_product">
+            <h4>Titre</h4>
+            <%= image_tag "http://placehold.it/300x300" %>
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="test-aws">
+    <% if !@creations.empty? %>
+      <% @creations.each do |creation| %>
+        <%= image_tag creations.picture.url(:medium) %>
+      <% end %>
+    <% else %>
+      <p>Il n'y a pas encore de photos</p>
+    <% end %>
+  </div>
 </div>
 
-<div class="test-aws below-navbar">
-  <% if !@creations.empty? %>
-    <%= image_tag @creations[0].picture.url(:medium) %>
-  <% else %>
-    <p>Le site est en cours de renovation. Contactez Lilian au plus vite</p>
-  <% end %>
-</div>
+

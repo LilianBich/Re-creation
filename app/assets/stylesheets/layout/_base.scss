@@ -5,5 +5,5 @@
  * already a Bootstrap SCSS variable that does the same job
  * ------------------------------------- */
  .below-navbar {
-  padding-top: $navbar-height + 2 * 10px;
+  padding-top: $navbar-height + 2 * $navbar-vertical-padding;
  }
