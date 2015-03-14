@@ -3,69 +3,70 @@
     <h2 class="text-center">Cote <span class="text-warning">Atelier</span></h2>
   </div>
   <div id="program_du_mois">
-    <h3 class = "text-center">Les ateliers du mois de <%=@program.mois.capitalize %></h3>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-          <div class="prog-sem">
-            <% if @program.sem1? %>
-              <div class="jour_date">
-                <%= @program.jour_date_sem1 %>
-              </div>
-              <%= @program.ateliers_sem1 %>
-            <% end %>
-          </div>
-          <div class="prog-sem">
-            <% if @program.sem2? %>
-              <br>
-              <div class="jour_date">
-                <%= @program.jour_date_sem2 %>
-              </div>
-              <%= @program.ateliers_sem2 %>
-            <% end %>
-          </div>
-          <div class="prog-sem">
-            <% if @program.sem3? %>
-              <br>
-              <div class="jour_date">
-                <%= @program.jour_date_sem3 %>
-              </div>
-              <%= @program.ateliers_sem3 %>
-            <% end %>
-          </div>
-          <div class="prog-sem">
-            <% if @program.sem4? %>
-              <br>
-              <div class="jour_date">
-                <%= @program.jour_date_sem4 %>
-              </div>
-              <%= @program.ateliers_sem4 %>
-            <% end %>
-          </div>
-          <div class="prog-sem">
-            <% if @program.sem5? %>
-              <br>
-              <div class="jour_date">
-                <%= @program.jour_date_sem5 %>
-              </div>
-              <%= @program.ateliers_sem5 %>
-            <% end %>
-          </div>
-          <div class="prog-sem">
-            <% if @program.vacances? %>
-              <br>
-              <div class="jour_date">
-                Pendant les vacances :
-              </div>
-              <%= @program.ateliers_vacances %>
-            <% end %>
+    <% if @program %>
+      <h3 class = "text-center">Les ateliers du mois de <%=@program.mois.capitalize %></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+            <div class="prog-sem">
+              <% if @program.sem1? %>
+                <div class="jour_date">
+                  <%= @program.jour_date_sem1 %>
+                </div>
+                <%= @program.ateliers_sem1 %>
+              <% end %>
+            </div>
+            <div class="prog-sem">
+              <% if @program.sem2? %>
+                <br>
+                <div class="jour_date">
+                  <%= @program.jour_date_sem2 %>
+                </div>
+                <%= @program.ateliers_sem2 %>
+              <% end %>
+            </div>
+            <div class="prog-sem">
+              <% if @program.sem3? %>
+                <br>
+                <div class="jour_date">
+                  <%= @program.jour_date_sem3 %>
+                </div>
+                <%= @program.ateliers_sem3 %>
+              <% end %>
+            </div>
+            <div class="prog-sem">
+              <% if @program.sem4? %>
+                <br>
+                <div class="jour_date">
+                  <%= @program.jour_date_sem4 %>
+                </div>
+                <%= @program.ateliers_sem4 %>
+              <% end %>
+            </div>
+            <div class="prog-sem">
+              <% if @program.sem5? %>
+                <br>
+                <div class="jour_date">
+                  <%= @program.jour_date_sem5 %>
+                </div>
+                <%= @program.ateliers_sem5 %>
+              <% end %>
+            </div>
+            <div class="prog-sem">
+              <% if @program.vacances? %>
+                <br>
+                <div class="jour_date">
+                  Pendant les vacances :
+                </div>
+                <%= @program.ateliers_vacances %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-
+    <% else %>
+      <p>Il n'y a pas de program du mois</p>
+    <% end %>
   </div>
   <div class="bg-pink text-center">
     <h3>Une selection des plus belles creation du mois dernier</h3>
