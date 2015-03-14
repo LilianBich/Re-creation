@@ -4,6 +4,7 @@ ActiveAdmin.register Produit do
 
   index do
     selectable_column
+    colum :title
     column :description
     column :prix
     column :creation
@@ -12,6 +13,7 @@ ActiveAdmin.register Produit do
 
   form do |f|
     f.inputs "Details" do
+      f.input :title
       f.input :description
       f.input :prix
       f.input :creation

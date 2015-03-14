@@ -1,13 +1,43 @@
-
-<!-- REfaire une boucle ici, postionnment un peu tricky -->
-
-
-<div class="test-aws below-navbar">
-  <% if !@creations.empty? %>
-    <%= image_tag @creations[0].picture.url(:medium) %>
-  <% else %>
-    <p>Le site est en cours de renovation. Contactez Lilian au plus vite</p>
-  <% end %>
+<div class="below-navbar">
+  <div class="bg-pink padded text-center">
+    <h2>Decouvrez nos creations</h2>
+    <div class="TODO-Remove">
+      <div class="creation_card">
+        <div class="container-fluid">
+          <h3>Titre</h3>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 text-center">
+              <%= image_tag 'http://placehold.it/200x200' %>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="creation_description">
+                J'ai vraiment besoin de photos et de texte pour continuer a avancer !!!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if !@creations.empty? %>
+      <% @creations.each do |creation| %>
+        <div class="creation_card">
+          <div class="container-fluid">
+            <h3><%= creation.title %></h3>
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <%= image_tag creation.picture.url(:medium), class: "text-center" %>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="creation_description">
+                  <%=creation.description%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>Il n'y a pas encore de photos</p>
+    <% end %>
+  </div>
 </div>
-
-

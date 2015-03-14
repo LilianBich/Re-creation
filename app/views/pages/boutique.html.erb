@@ -4,14 +4,14 @@
     <div class="cotainer">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <div class="card_product">
+          <div class="product_card">
             <h4>Titre</h4>
             <%= image_tag "http://placehold.it/300x300" %>
             <p></p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6">
-          <div class="card_product">
+          <div class="product_card">
             <h4>Titre</h4>
             <%= image_tag "http://placehold.it/300x300" %>
             <p></p>
@@ -23,7 +23,7 @@
   <div class="test-aws">
     <% if !@creations.empty? %>
       <% @creations.each do |creation| %>
-        <%= image_tag creations.picture.url(:medium) %>
+        <%= image_tag creation.picture.url(:medium) %>
       <% end %>
     <% else %>
       <p>Il n'y a pas encore de photos</p>

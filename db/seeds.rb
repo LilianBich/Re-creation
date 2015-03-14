@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-ProgrammeDuMois.destroy_all
+# ProgrammeDuMois.destroy_all
 p = ProgrammeDuMois.new
 p.mois = "février"
 p.sem1 = true
