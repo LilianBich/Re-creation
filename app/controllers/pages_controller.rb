@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
 
   def atelier
+    tracker = Mixpanel::Tracker.new(ENV['MX_TOKEN'])
+    current_user ? tracker.track(current_user.id, 'Visite page atelier') : tracker.track(0, 'Visite page atelier')
     @program = ProgrammeDuMois.last
   end
 
