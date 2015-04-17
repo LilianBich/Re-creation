@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'pages#contact'
 
+  get '/slim', to: 'pages#slim'
+
   devise_for :users
 
 
