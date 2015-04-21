@@ -4,7 +4,7 @@ ActiveAdmin.register Produit do
 
   index do
     selectable_column
-    colum :title
+    column :title
     column :description
     column :prix
     column :creation
